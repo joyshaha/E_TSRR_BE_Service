@@ -1,5 +1,9 @@
 const { Sequelize } = require("sequelize");
 
+// Explicitly require pg to ensure it's loaded before Sequelize initialization
+// This is important for Vercel/serverless deployments
+require("pg");
+
 const production = {
   url: process.env.POSTGRES_URL,
   dialect: "postgres",

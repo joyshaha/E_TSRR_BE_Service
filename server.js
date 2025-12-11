@@ -22,7 +22,7 @@ app.use(express.json());
 app.use("/", require("./routes/home"));
 app.use("/api/auth", require("./routes/auth"));
 app.use("/api/users", require("./routes/users"));
-// app.use("/api/products", require("./routes/product"));
+app.use("/api/products", require("./routes/product"));
 app.use("/api/2fa", require("./routes/2fa"));
 
 // define default error handler
