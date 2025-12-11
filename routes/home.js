@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 const { authenticateToken } = require("../middleware/auth");
 const User = require("../models/User");
-const sequelize = require("../config/pg");
+const sequelize = require('../config/postgres');
 
 router.get("/", async (req, res) => {
   console.log("Health Check");

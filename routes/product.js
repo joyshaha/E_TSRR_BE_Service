@@ -3,7 +3,6 @@ const router = express.Router();
 const Product = require("../models/Product");
 const { authenticateToken } = require("../middleware/auth");
 
-
 router.get("/", authenticateToken, async (req, res) => {
   try {
     const products = await Product.findAll({

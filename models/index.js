@@ -1,8 +1,8 @@
 const { Sequelize } = require("sequelize");
 const { production, development } = require('../config/config');
 
-const dotenv = require("dotenv");
-dotenv.config();
+// const dotenv = require("dotenv");
+// dotenv.config();
 
 let sequelize;
 
