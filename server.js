@@ -2,6 +2,7 @@ const express = require("express");
 const cors = require("cors");
 const ennvironment = require("dotenv");
 const connectDatabase = require("./config/db_connector");
+const serverless = require("serverless-http");
 
 const app = express();
 
@@ -34,6 +35,8 @@ app.use("/api/2fa", require("./routes/2fa"));
 //   res.status(500).json({ error: err.message });
 // }
 // app.use(errorHandler);
+
+// module.exports = serverless(app);
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
