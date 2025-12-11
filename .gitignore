@@ -38,6 +38,7 @@ pnpm-lock.yaml
 .env.production
 .env.production.local
 .env.*.local
+.env.example
 
 # ========================
 # Logs
