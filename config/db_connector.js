@@ -1,5 +1,5 @@
 const connectDB = require("./mongo");
-const getSequelize = require("../models/index");
+// const getSequelize = require("../models/index");
 
 const connectDatabase = async () => {
   try {
@@ -7,8 +7,7 @@ const connectDatabase = async () => {
     connectDB();
     console.log('MongoDB connected');
     // Connect to Postgres
-    getSequelize()
-    console.log("Postgres connection successful");
+    // getSequelize()
     // Sync the database (Create tables if not exists)
     // await sequelize.sync({ alter: true });
     // console.log('Postgres tables synchronized successfully');

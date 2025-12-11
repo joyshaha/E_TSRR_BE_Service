@@ -1,7 +1,8 @@
 const express = require("express");
 const cors = require("cors");
 const ennvironment = require("dotenv");
-const connectDatabase = require("./config/db_connector");
+// const connectDatabase = require("./config/db_connector");
+const connectDB = require("./config/mongo");
 const serverless = require("serverless-http");
 
 const app = express();
@@ -10,7 +11,8 @@ const app = express();
 ennvironment.config();
 
 // Connect to Database
-connectDatabase();
+connectDB();
+// connectDatabase();
 
 // Middleware
 app.use(cors({

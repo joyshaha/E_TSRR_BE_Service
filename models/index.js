@@ -14,6 +14,7 @@ function getSequelize() {
     });
   }
   sequelize.authenticate();
+  console.log("Postgres connection successful");
   return sequelize;
 }
 
