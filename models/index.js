@@ -1,8 +1,27 @@
 const { Sequelize } = require("sequelize");
-const { production, development } = require('../config/config');
 
-// const dotenv = require("dotenv");
-// dotenv.config();
+const production = {
+  url: process.env.POSTGRES_URL,
+  dialect: "postgres",
+  dialectOptions: {
+    ssl: {
+      require: true,
+      rejectUnauthorized: false,
+      ca: process.env.PG_CA_CERT // Aiven SSL Cert
+    }
+  }
+}
+
+const development = {  
+  url: process.env.POSTGRES_URL,
+  dialect: "postgres",
+  dialectOptions: {
+    ssl: {
+      require: true,
+      rejectUnauthorized: false
+    }
+  }
+}
 
 let sequelize;
 
